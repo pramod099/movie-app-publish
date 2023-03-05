@@ -1,5 +1,6 @@
 // Import Express
 const express = require("express");
+const path = require("path");
 
 // Import movieInfo model
 const MovieInfo = require("./model/movieDb");
@@ -87,4 +88,10 @@ app.get("/api/search", async (req, res) => {
   } catch (error) {
     res.status(500).send(error);
   }
+});
+
+// Front-End buid
+app.use(express.static(path.join(__dirname, "/build")));
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "/build/index.html"));
 });
