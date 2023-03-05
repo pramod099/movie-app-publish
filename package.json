@@ -1,5 +1,5 @@
 {
-  "name": "movie-app-v1",
+  "name": "movie-app",
   "version": "1.0.0",
   "description": "API to power MovieApp",
   "main": "index.js",
